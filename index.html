@@ -80,6 +80,17 @@
   .sector .credit{font-size:11px;color:var(--ink-2);opacity:.7;margin-top:10px}
   /* results */
   .band{background:var(--paper);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:28px;margin-top:38px}
+  .steps div{border-top:2px solid var(--navy);padding-top:14px;font-size:15.5px;color:var(--ink-2)}
+  .steps .n{font-family:var(--serif);color:var(--gold);font-size:20px;display:block;margin-bottom:6px}
+  .steps b{display:block;font-family:var(--serif);color:var(--ink);font-size:19px;font-weight:600;margin-bottom:6px}
+  .causes{display:grid;grid-template-columns:repeat(4,1fr);margin-top:38px;border:1px solid var(--rule);background:var(--bg)}
+  .causes div{padding:18px 20px;border-right:1px solid var(--rule);font-size:15px;color:var(--ink-2)}
+  .causes div:last-child{border-right:0}
+  .causes b{display:block;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--navy);font-weight:700;margin-bottom:6px}
+  .method-note{margin-top:22px;font-size:15px;color:var(--ink-2)}
+  @media (max-width:900px){.steps,.causes{grid-template-columns:1fr 1fr}.causes div{border-right:0;border-bottom:1px solid var(--rule)}}
+  @media (max-width:560px){.steps,.causes{grid-template-columns:1fr}}
   table.res{width:100%;border-collapse:collapse;font-size:16px;margin-top:28px}
   table.res th,table.res td{padding:15px 12px;border-bottom:1px solid var(--rule);text-align:left;vertical-align:top}
   table.res th{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);border-bottom:2px solid var(--rule-2)}
@@ -128,7 +139,7 @@
 <div class="topbar"><div class="wrap"><span>Serving Virginia and Washington, DC</span><span><a href="#contact">zak@commonwealthutilityaudit.com</a></span></div></div>
 <header class="site"><div class="wrap">
   <a class="wordmark" href="#top"><img class="mark" src="img/mark-inverse.svg" alt="" width="44" height="44"><span>Commonwealth Utility Audit<small>Utility bill auditing · recovery · monitoring</small></span></a>
-  <nav class="main"><a href="#services">Services</a><a href="#sectors">Sectors</a><a href="#fees">Fees</a><a href="#results">Results</a><a href="#firm">The Firm</a><a href="#contact" class="btn" style="padding:10px 18px;border-bottom:1px solid var(--navy)">Request an audit</a></nav>
+  <nav class="main"><a href="#services">Services</a><a href="#method">Method</a><a href="#sectors">Sectors</a><a href="#fees">Fees</a><a href="#results">Results</a><a href="#firm">The Firm</a><a href="#contact" class="btn" style="padding:10px 18px;border-bottom:1px solid var(--navy)">Request an audit</a></nav>
 </div></header>
 
 <div class="hero" id="top">
@@ -145,7 +156,7 @@
 <div class="cred"><div class="wrap">
   <div><b>Independent</b>No energy supply sales. No supplier commissions.</div>
   <div><b>Plain fees</b>A complimentary back-audit, a contingent fee on refunds, and an optional monthly fee for ongoing analysis.</div>
-  <div><b>Documented</b>Every finding carries the tariff citation and the arithmetic.</div>
+  <div><b>Recomputed</b>Every bill read by machine, every line rebuilt from the tariff. Findings carry the citation and the arithmetic.</div>
 </div></div>
 
 <div class="wrap">
@@ -160,8 +171,27 @@
 </section>
 </div>
 
+<div class="band"><div class="wrap"><section id="method">
+  <span class="kicker">Method</span>
+  <h2 style="max-width:30ch">Every bill read by machine, recomputed to the cent, and traced to a cause.</h2>
+  <p class="lead" style="margin-top:14px;max-width:70ch">Most bill review compares this month's total with last month's. We never start from the total. Each bill is broken into its lines the day it issues, each line is rebuilt from the meter reads and the published rate, and every change is traced to one of four causes and stated in dollars before a person reviews it. The only input is the bills your utilities already produce. Nothing is installed.</p>
+  <div class="steps">
+    <div><span class="n">01</span><b>Read</b>Bills are obtained from the utility the day they issue and read automatically: every meter read, multiplier, rate, rider, tax, payment and balance, on every account.</div>
+    <div><span class="n">02</span><b>Recompute</b>Each line is recalculated from its inputs and the published tariff or supply contract. The printed total is never taken on trust; it is rebuilt and matched to the cent.</div>
+    <div><span class="n">03</span><b>Compare</b>Use per day, peak demand, load factor and unit price are set against the same period a year earlier and the building's own history. Anything that moves by a fifth, or is estimated, is flagged.</div>
+    <div><span class="n">04</span><b>Diagnose and price</b>Every flag is traced to its cause and stated in dollars with the arithmetic and the tariff citation, then reviewed by a person before it reaches you as a one-page finding.</div>
+  </div>
+  <div class="causes">
+    <div><b>Billing</b>Doubled demand, uncredited payments, late charges, sales tax on exempt accounts, estimated reads that never true up, accounts still billing after a sale.</div>
+    <div><b>Pricing</b>Wrong rate schedule, supply invoices off contract, riders misapplied, price steps nobody was told about.</div>
+    <div><b>Usage</b>Water and steam leaks, meter faults, consumption that rises with no change in the building.</div>
+    <div><b>Utilization</b>Demand spikes and a falling load factor that show equipment running when it should not, priced per month so the fix can be justified.</div>
+  </div>
+  <p class="method-note">The same four steps run on the historical audit and on every new bill under monthly analysis. Finding 1 in the worked example below was caught by step two.</p>
+</section></div></div>
+
 <div class="wrap">
-<section id="sectors" style="padding-top:0">
+<section id="sectors">
   <span class="kicker">Sectors served</span>
   <h2 style="max-width:26ch">Any building whose utility accounts nobody reads line by line.</h2>
   <div class="sectors" style="margin-top:34px">
