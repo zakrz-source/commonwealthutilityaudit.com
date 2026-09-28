@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" role="img" aria-label="Commonwealth Utility Audit mark">
+  <rect width="100" height="100" fill="#14284B"/>
+  <rect x="7.5" y="7.5" width="85" height="85" fill="none" stroke="#A8892B" stroke-width="1.2"/>
+  <text x="50" y="47" text-anchor="middle" dominant-baseline="central" font-family="'Source Serif 4',Georgia,'Times New Roman',serif" font-weight="600" font-size="40" fill="#FFFFFF" letter-spacing="0.5">CUA</text>
+  <rect x="39" y="71.5" width="22" height="1" fill="#A8892B"/>
+</svg>

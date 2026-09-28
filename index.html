@@ -1,0 +1,263 @@
+<meta charset="utf-8">
+<title>Commonwealth Utility Audit</title>
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="512x512" href="img/icon-512.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Source+Sans+3:wght@400;500;600;700&display=swap">
+<style>
+  :root{
+    --bg:#F6F5F2; --paper:#FFFFFF; --ink:#1C2128; --ink-2:#4F5761; --rule:#D9D6CF; --rule-2:#B9B5AC;
+    --navy:#14284B; --navy-2:#0E1D37; --navy-soft:#E7EBF2; --gold:#A8892B; --gold-soft:#F1EAD6; --pen:#B3261E;
+    --serif:"Source Serif 4",Georgia,"Times New Roman",serif; --sans:"Source Sans 3",system-ui,Helvetica,Arial,sans-serif;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){ --bg:#101418; --paper:#171C22; --ink:#ECEEF1; --ink-2:#AEB5BE; --rule:#2B323B; --rule-2:#3D4650; --navy:#1C3A6B; --navy-2:#132A4E; --navy-soft:#1B2634; --gold:#C9A94B; --gold-soft:#2A2618; --pen:#FF6B62; color-scheme:dark; }
+  }
+  :root[data-theme="dark"]{ --bg:#101418; --paper:#171C22; --ink:#ECEEF1; --ink-2:#AEB5BE; --rule:#2B323B; --rule-2:#3D4650; --navy:#1C3A6B; --navy-2:#132A4E; --navy-soft:#1B2634; --gold:#C9A94B; --gold-soft:#2A2618; --pen:#FF6B62; color-scheme:dark; }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6;padding-inline:0}
+  .wrap{max-width:1140px;margin:0 auto;padding-inline:24px}
+  h1,h2,h3{font-family:var(--serif);font-weight:600;letter-spacing:-.005em;margin:0;text-wrap:balance}
+  h1{font-size:clamp(36px,4.8vw,58px);line-height:1.08}
+  h2{font-size:clamp(28px,3.2vw,38px);line-height:1.15}
+  h3{font-size:22px;line-height:1.3}
+  p{margin:0}
+  .muted{color:var(--ink-2)}
+  .kicker{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:700;display:block;margin-bottom:12px}
+  .btn{display:inline-block;padding:13px 22px;font-weight:600;font-size:15px;text-decoration:none;border:1px solid var(--navy);color:#fff;background:var(--navy);letter-spacing:.01em}
+  .btn:hover{background:var(--navy-2)}
+  .btn.alt{background:transparent;color:var(--ink);border-color:var(--rule-2)}
+  .btn.alt:hover{border-color:var(--ink)}
+  .btn.light{background:#fff;color:var(--navy);border-color:#fff}
+  .btn.light:hover{background:#F0F0EC}
+  /* top bar + header */
+  .topbar{background:var(--navy-2);color:#fff;font-size:13px}
+  .topbar .wrap{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;padding-block:8px}
+  .topbar a{color:#fff;text-decoration:none;opacity:.9}
+  header.site{background:var(--paper);border-bottom:1px solid var(--rule);position:sticky;top:env(safe-area-inset-top,0px);z-index:10}
+  header.site .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;height:78px}
+  .wordmark{text-decoration:none;color:var(--ink);font-family:var(--serif);font-weight:600;font-size:21px;letter-spacing:.01em;line-height:1.1;display:flex;align-items:center;gap:12px}
+  .wordmark .mark{width:44px;height:44px;flex:none;display:block}
+  .wordmark small{display:block;font-family:var(--sans);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-2);font-weight:600;margin-top:3px}
+  nav.main{display:flex;gap:28px;align-items:center;font-size:15px;font-weight:500}
+  nav.main a{color:var(--ink);text-decoration:none;padding-bottom:4px;border-bottom:2px solid transparent}
+  nav.main a:hover{border-color:var(--gold)}
+  nav.main a.btn{color:#fff;border-bottom:1px solid var(--navy)}
+  nav.main a.btn:hover{border-color:var(--navy-2)}
+  /* hero */
+  .hero{position:relative;min-height:560px;display:grid;align-items:end;color:#fff;background:#0E1D37}
+  .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 40%}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(14,29,55,.25) 0%,rgba(14,29,55,.55) 45%,rgba(14,29,55,.92) 100%)}
+  .hero .wrap{position:relative;z-index:1;padding-block:72px 52px;display:grid;gap:20px;max-width:1140px}
+  .hero h1{max-width:20ch}
+  .hero p{max-width:60ch;font-size:19px;color:rgba(255,255,255,.88)}
+  .hero .kicker{color:#E6D4A0}
+  .hero .cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:6px}
+  .hero .credit{font-size:11.5px;color:rgba(255,255,255,.55);margin-top:10px}
+  /* credentials strip */
+  .cred{background:var(--paper);border-bottom:1px solid var(--rule)}
+  .cred .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+  .cred div{padding:22px 18px 22px 0;border-right:1px solid var(--rule);font-size:15px}
+  .cred div:last-child{border-right:0}
+  .cred div+div{padding-left:18px}
+  .cred b{display:block;font-family:var(--serif);font-size:18px;font-weight:600;margin-bottom:2px}
+  section{padding-block:80px}
+  .split{display:grid;grid-template-columns:1fr 1.5fr;gap:56px;align-items:start}
+  .lead{font-size:18px;color:var(--ink-2);max-width:60ch}
+  ol.services{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule-2)}
+  ol.services li{display:grid;grid-template-columns:64px 1fr;gap:18px;padding:26px 0;border-bottom:1px solid var(--rule)}
+  ol.services .n{font-family:var(--serif);font-size:20px;color:var(--gold)}
+  ol.services h3{margin-bottom:6px}
+  ol.services p{color:var(--ink-2);max-width:62ch}
+  /* sectors with photos */
+  .sectors{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
+  .sector{background:var(--paper);border:1px solid var(--rule)}
+  .sector img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;filter:saturate(.85)}
+  .sector .body{padding:20px 22px 24px}
+  .sector h3{margin-bottom:8px}
+  .sector p{color:var(--ink-2);font-size:15.5px}
+  .sector .credit{font-size:11px;color:var(--ink-2);opacity:.7;margin-top:10px}
+  /* results */
+  .band{background:var(--paper);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
+  table.res{width:100%;border-collapse:collapse;font-size:16px;margin-top:28px}
+  table.res th,table.res td{padding:15px 12px;border-bottom:1px solid var(--rule);text-align:left;vertical-align:top}
+  table.res th{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-2);border-bottom:2px solid var(--rule-2)}
+  table.res td.amt,table.res th.amt{text-align:right;white-space:nowrap;font-family:var(--serif);font-size:18px;font-weight:600;font-variant-numeric:tabular-nums}
+  .tblwrap{overflow-x:auto}
+  .exhibit{border:1px solid var(--rule);background:var(--paper);padding:22px 24px;margin-top:34px;display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:start}
+  .exhibit table{width:100%;border-collapse:collapse;font-size:14.5px;font-variant-numeric:tabular-nums}
+  .exhibit td{padding:7px 6px;border-bottom:1px solid var(--rule)}
+  .exhibit td:last-child{text-align:right;font-weight:600;white-space:nowrap}
+  .exhibit tr.hi td{background:var(--gold-soft);font-weight:700}
+  .exhibit tr.tot td{border-bottom:3px double var(--ink);font-weight:700}
+  .exhibit .cap{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);margin-bottom:8px}
+  .exhibit .an{font-size:15.5px;color:var(--ink-2)}
+  .exhibit .an b{color:var(--pen)}
+  /* firm */
+  .firm{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:start}
+  .bio{border-left:3px solid var(--gold);padding-left:22px}
+  .bio .portrait{width:100%;aspect-ratio:1/1;object-fit:cover;object-position:center 35%;display:block;margin-bottom:18px;border:1px solid var(--rule)}
+  .bio h3{margin-bottom:4px}
+  .bio .role{font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);margin-bottom:10px}
+  .bio p{color:var(--ink-2);font-size:15.5px}
+  .principles{display:grid;gap:14px;margin-top:22px}
+  .principles div{padding:16px 0;border-top:1px solid var(--rule);font-size:15.5px;color:var(--ink-2)}
+  .principles b{color:var(--ink);display:block;font-family:var(--serif);font-size:17px;margin-bottom:3px}
+  /* contact */
+  .contact{background:var(--navy);color:#fff}
+  .contact .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;padding-block:72px}
+  .contact h2{color:#fff}
+  .contact p{color:rgba(255,255,255,.85)}
+  .contact .kicker{color:#E6D4A0}
+  .det{display:grid;gap:0;border-top:1px solid rgba(255,255,255,.25)}
+  .det div{display:grid;grid-template-columns:120px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.18);font-size:15.5px;align-items:center}
+  .det .k{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;opacity:.75}
+  .det .v{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+  button.copy{font:inherit;font-size:12px;padding:4px 10px;border:1px solid rgba(255,255,255,.45);background:transparent;color:#fff;cursor:pointer}
+  button.copy:hover{background:#fff;color:var(--navy)}
+  footer{background:var(--navy-2);color:rgba(255,255,255,.78);font-size:14px}
+  footer .wrap{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:32px;padding-block:44px 36px}
+  footer h4{margin:0 0 10px;color:#fff;font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+  footer a{display:block;color:rgba(255,255,255,.78);text-decoration:none;margin-bottom:6px}
+  footer .legal{border-top:1px solid rgba(255,255,255,.15);padding-block:16px 20px;font-size:12px;color:rgba(255,255,255,.55);display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
+  @media (max-width:900px){nav.main{display:none}.cred .wrap{grid-template-columns:1fr 1fr}.cred div{border-right:0;border-bottom:1px solid var(--rule);padding-left:0}.split,.firm,.contact .wrap,.exhibit{grid-template-columns:1fr}.sectors{grid-template-columns:1fr}footer .wrap{grid-template-columns:1fr 1fr}.hero{min-height:480px}}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+
+<div class="topbar"><div class="wrap"><span>Charlottesville, Virginia &nbsp;·&nbsp; Serving Virginia and Washington, DC</span><span><a href="#contact">(703) 474-1016</a> &nbsp;·&nbsp; <a href="#contact">zak@commonwealthutilityaudit.com</a></span></div></div>
+<header class="site"><div class="wrap">
+  <a class="wordmark" href="#top"><img class="mark" src="img/mark-inverse.svg" alt="" width="44" height="44"><span>Commonwealth Utility Audit<small>Utility bill auditing · recovery · monitoring</small></span></a>
+  <nav class="main"><a href="#services">Services</a><a href="#sectors">Sectors</a><a href="#fees">Fees</a><a href="#results">Results</a><a href="#firm">The Firm</a><a href="#contact" class="btn" style="padding:10px 18px;border-bottom:1px solid var(--navy)">Request an audit</a></nav>
+</div></header>
+
+<div class="hero" id="top">
+  <img src="img/trb.jpg" alt="The Theodore Roosevelt Federal Building, Washington, DC">
+  <div class="wrap">
+    <span class="kicker">Independent utility bill auditing</span>
+    <h1>Your building's utility bills contain errors. We find them, prove them, and recover the money.</h1>
+    <p>Electric, gas, water, sewer and steam accounts for any building with a meaningful utility bill: offices, apartments, campuses, hospitals, warehouses, restaurants and government space across Virginia and the District of Columbia. Every bill recomputed against the published tariff.</p>
+    <div class="cta"><a class="btn light" href="#contact">Request a complimentary back-audit</a><a class="btn alt" style="color:#fff;border-color:rgba(255,255,255,.6)" href="#fees">Fees</a></div>
+    <div class="credit">Photograph: Theodore Roosevelt Federal Building, Washington, DC · ajay_suresh, CC BY 4.0</div>
+  </div>
+</div>
+
+<div class="cred"><div class="wrap">
+  <div><b>Independent</b>No energy supply sales. No supplier commissions.</div>
+  <div><b>Plain fees</b>A complimentary back-audit, a contingent fee on refunds, and a flat monthly fee for ongoing analysis.</div>
+  <div><b>Documented</b>Every finding carries the tariff citation and the arithmetic.</div>
+  <div><b>Virginia LLC</b>Entity 12082431 · Charlottesville, Virginia · Est. 2026</div>
+</div></div>
+
+<div class="wrap">
+<section id="services" class="split">
+  <div><span class="kicker">Services</span><h2>Four disciplines, one standard: to the cent.</h2><p class="lead" style="margin-top:14px">Utilities bill from systems that make errors routinely and correct them rarely. Our work is to read every line, recompute it, and pursue what is owed.</p></div>
+  <ol class="services">
+    <li><span class="n">01</span><div><h3>Historical bill audit</h3><p>Twenty-four to thirty-six months of bills for every account in a building, recomputed against the applicable tariff and supply contract. Meter readings, multipliers, demand, rate classification, riders, taxes, credits, payments and balances are each verified. A written report is delivered within 48 hours of receiving the bills. There is no charge.</p></div></li>
+    <li><span class="n">02</span><div><h3>Recovery of overcharges</h3><p>Where an error is found, we prepare the claim with the supporting arithmetic and tariff citation, submit it under your authorization, and follow the utility until the credit posts. You approve every submission. Our fee is twenty percent of amounts actually recovered, invoiced after the credit appears.</p></div></li>
+    <li><span class="n">03</span><div><h3>Continuous monitoring</h3><p>Each new bill is obtained the day it issues and checked against the tariff and against the same period of prior years. A one-page monthly statement per building identifies what changed, why, in dollars, and the action recommended. A flat monthly fee per building, or per account for campuses and portfolios. Suitable for purchase-card procurement.</p></div></li>
+    <li><span class="n">04</span><div><h3>Tariff and contract review</h3><p>Confirmation that each account sits on the most favorable available rate schedule and that supplier invoices conform to contract pricing, term and pass-through provisions. Performed as part of every audit and repeated at each tariff revision.</p></div></li>
+  </ol>
+</section>
+</div>
+
+<div class="wrap">
+<section id="sectors" style="padding-top:0">
+  <span class="kicker">Sectors served</span>
+  <h2 style="max-width:26ch">Any building whose utility accounts nobody reads line by line.</h2>
+  <div class="sectors" style="margin-top:34px">
+    <div class="sector"><img src="img/trb.jpg" alt="Federal office building"><div class="body"><h3>Federal and government</h3><p>Agency headquarters, field offices and leased space. Tax-exempt status, purchase-card procurement and multi-account buildings are where the largest errors occur. SAM.gov registration in progress.</p><div class="credit">ajay_suresh, CC BY 4.0</div></div></div>
+    <div class="sector"><img src="img/rotunda.jpg" alt="The Rotunda at the University of Virginia"><div class="body"><h3>Higher education and healthcare</h3><p>Campuses with hundreds of accounts, central plants, cooling towers and sewer credits, and tax exemptions that utilities routinely fail to apply.</p><div class="credit">Phil Roeder, CC BY 2.0</div></div></div>
+    <div class="sector"><img src="img/cville.jpg" alt="Downtown Charlottesville, Virginia"><div class="body"><h3>Commercial, multifamily and small business</h3><p>Property portfolios, apartment and student housing, condominium associations, restaurants, retail, private schools and nonprofits. Master-metered water and stormwater charges are the usual findings.</p><div class="credit">Alex Proimos, CC BY 2.0</div></div></div>
+  </div>
+</section>
+</div>
+
+
+<div class="wrap">
+<section id="fees" class="split" style="padding-top:0">
+  <div><span class="kicker">Fees</span><h2>Three fees. Each one is explained in a sentence.</h2><p class="lead" style="margin-top:14px">Most of our clients engage us in two parts: a back-audit to recover what is already owed, then a monthly retainer so every new bill is analysed the day it arrives. Both are priced to fit a purchase card.</p></div>
+  <ol class="services">
+    <li><span class="n">$0</span><div><h3>Back-audit</h3><p>Twenty-four to thirty-six months of bills for every account in one building, recomputed and reported in writing within 48 hours. Complimentary. If nothing is found, the report is yours and no fee is due.</p></div></li>
+    <li><span class="n">20%</span><div><h3>Recovery</h3><p>Twenty percent of refunds and credits actually received as a result of our findings, invoiced only after the credit posts. Nothing on amounts not recovered.</p></div></li>
+    <li><span class="n">$250</span><div><h3>Monthly analysis, per building</h3><p>Every account in the building, checked the day each bill issues, with a one-page monthly statement of what changed, why, in dollars, and the action recommended. Per-account pricing for campuses and portfolios. Invoiced quarterly in advance; cancel on thirty days' notice. Errors found during monitoring are recovered under the same twenty percent.</p></div></li>
+  </ol>
+</section>
+</div>
+
+<div class="band"><div class="wrap"><section id="results">
+  <span class="kicker">Documented results</span>
+  <h2 style="max-width:28ch">The errors recur. Reading every line is what finds them.</h2>
+  <p class="lead" style="margin-top:14px">Recoveries documented by the Washington-area utility bill practice, in continuous operation since 1987, on whose methods and records this firm is built. Customer names withheld.</p>
+  <div class="tblwrap"><table class="res">
+    <tr><th>Utility</th><th>Finding</th><th class="amt">Amount</th></tr>
+    <tr><td>Electric supplier</td><td>Commodity billed at 12.22¢ per kWh against a contract price of 6.11¢, three consecutive months</td><td class="amt">$179,695</td></tr>
+    <tr><td>DC Water</td><td>Stormwater fee assessed on 1,140 impervious-area units; the parcel supported approximately 60</td><td class="amt">$178,194</td></tr>
+    <tr><td>DC Water</td><td>Account continued billing for a building the customer had sold</td><td class="amt">$169,660</td></tr>
+    <tr><td>Pepco</td><td>Payment of $291,660 received; $194,603 credited</td><td class="amt">$97,057</td></tr>
+    <tr><td>Pepco</td><td>Demand billed at twice the metered reading; corrected on re-bill</td><td class="amt">$39,539</td></tr>
+    <tr><td>Pepco</td><td>Late-payment charges accrued over eight years on an account paid on alternate months</td><td class="amt">$26,124</td></tr>
+    <tr><td>Pepco</td><td>Sales tax charged to a tax-exempt university for ten months</td><td class="amt">$16,149</td></tr>
+    <tr><td>DC Water</td><td>Cooling-tower sewer credits omitted</td><td class="amt">$12,000 per year</td></tr>
+  </table></div>
+  <div class="exhibit">
+    <div><div class="cap">Exhibit · Pepco, Schedule GT-3A, federal office building, 28-day period</div>
+      <table>
+        <tr><td>Customer charge</td><td>238.95</td></tr>
+        <tr><td>On-peak energy · 141,633 kWh × $0.014194</td><td>2,010.34</td></tr>
+        <tr class="hi"><td>Maximum demand · 3,679.20 kW × $14.49</td><td>53,311.60</td></tr>
+        <tr><td>Off-peak energy · 175,071 kWh × $0.014194</td><td>2,484.96</td></tr>
+        <tr class="tot"><td>Delivery charges as billed</td><td>79,078.08</td></tr>
+      </table></div>
+    <div class="an"><div class="cap">Analysis</div><p>The interval meters recorded a peak of <b>1,839.6 kW</b>. The bill applied exactly twice that figure. Recomputed under the tariff, delivery charges are <b>$39,539.04</b>, an overcharge of <b>$39,539.04</b> in a single month. The utility issued a corrected bill five weeks after the discrepancy was raised. The same account had carried a comparable unexplained demand figure five years earlier that was never questioned.</p></div>
+  </div>
+</section></div></div>
+
+<div class="wrap">
+<section id="firm" class="firm">
+  <div>
+    <span class="kicker">The firm</span>
+    <h2>A second-generation practice, rebuilt for the way bills arrive now.</h2>
+    <p class="lead" style="margin-top:14px">Commonwealth Utility Audit was established in Charlottesville, Virginia in 2026. Its methods descend from a Washington-area utility bill practice that has audited accounts for federal agencies and universities since 1987, documenting more than $860,000 in recovered charges. We have rebuilt that practice on modern tooling: bills are read automatically the day they issue, recomputed to the cent, and reviewed by a person before anything reaches you.</p>
+    <div class="principles">
+      <div><b>Independence</b>We do not sell or broker energy supply and accept no compensation from utilities or suppliers. The audit is the service, not the introduction to one.</div>
+      <div><b>Verifiability</b>Findings are delivered with the tariff citation and the calculation, in a form your own accounting or counsel can check.</div>
+      <div><b>Confidentiality</b>Bills and account data are held encrypted. We never hold utility portal credentials; access is by authorized-user delegation, revocable at any time.</div>
+      <div><b>Territory</b>Dominion Energy Virginia, City of Charlottesville, Pepco, Washington Gas, DC Water and BGE. We work where we know the tariffs.</div>
+    </div>
+  </div>
+  <div class="bio">
+    <img class="portrait" src="img/zak.jpg" alt="Zak Zaloom, founder, at the controls of a light aircraft">
+    <h3>Zak Zaloom</h3><div class="role">Founder and principal</div>
+    <p>Mr. Zaloom founded the firm in 2026 after training on thirty-eight years of records from the Washington practice from which its methods derive, and building the automated bill-reading and tariff-recomputation tools the firm now uses. He is based in Charlottesville and serves clients across Virginia and the District of Columbia.</p>
+    <p style="margin-top:12px">He is a student pilot, which the firm mentions only because the temperament it requires, checklists, instruments, and numbers that reconcile, is the temperament this work requires.</p>
+  </div>
+</section>
+</div>
+
+<div class="contact" id="contact"><div class="wrap">
+  <div><span class="kicker">Engage the firm</span><h2>Begin with a single building.</h2><p style="margin-top:14px;font-size:18px">Provide twenty-four months of bills, or execute a one-page letter of authorization and we will obtain them from the utility. A written audit follows within 48 hours. If nothing is found, the report is yours and no fee is due.</p></div>
+  <div class="det">
+    <div><span class="k">Email</span><span class="v"><span id="email">zak@commonwealthutilityaudit.com</span><button class="copy" data-copy="email" type="button">copy</button></span></div>
+    <div><span class="k">Telephone</span><span class="v"><span id="phone">(703) 474-1016</span><button class="copy" data-copy="phone" type="button">copy</button></span></div>
+    <div><span class="k">Office</span><span class="v">Charlottesville, Virginia</span></div>
+    <div><span class="k">Entity</span><span class="v">Commonwealth Utility Audit LLC · Virginia 12082431</span></div>
+  </div>
+</div></div>
+
+<footer><div class="wrap">
+  <div><h4>Commonwealth Utility Audit LLC</h4><p>Independent utility bill auditing, recovery and monitoring for commercial, multifamily, government, education and healthcare buildings in Virginia and Washington, DC.</p></div>
+  <div><h4>Services</h4><a href="#services">Historical bill audit</a><a href="#services">Recovery of overcharges</a><a href="#services">Continuous monitoring</a><a href="#services">Tariff and contract review</a><a href="#fees">Fees</a></div>
+  <div><h4>Sectors</h4><a href="#sectors">Federal and government</a><a href="#sectors">Higher education and healthcare</a><a href="#sectors">Commercial, multifamily and small business</a></div>
+  <div><h4>Contact</h4><a href="#contact">zak@commonwealthutilityaudit.com</a><a href="#contact">(703) 474-1016</a><a href="#contact">Charlottesville, Virginia</a></div>
+</div><div class="wrap legal"><span>© 2026 Commonwealth Utility Audit LLC. Not affiliated with any utility or energy supplier.</span><span>Photographs: ajay_suresh (CC BY 4.0), Phil Roeder (CC BY 2.0), Alex Proimos (CC BY 2.0), via Wikimedia Commons.</span></div></footer>
+
+<script>
+  document.querySelectorAll("button.copy").forEach(function(b){
+    b.addEventListener("click",function(){
+      var el=document.getElementById(b.dataset.copy), t=el.textContent, done=function(){b.textContent="copied";setTimeout(function(){b.textContent="copy"},1400)};
+      var fallback=function(){var r=document.createRange(); r.selectNodeContents(el); var s=getSelection(); s.removeAllRanges(); s.addRange(r);};
+      try{ navigator.clipboard.writeText(t).then(done,fallback); }catch(e){ fallback(); }
+    });
+  });
+</script>
