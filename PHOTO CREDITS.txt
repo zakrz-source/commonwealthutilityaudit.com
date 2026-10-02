@@ -1,4 +1,5 @@
-Photographs used on the website (all Creative Commons, attribution required and given in the site footer):
-img/trb.jpg      "U.S. Office of Personnel Management - Theodore Roosevelt Federal Building" by ajay_suresh, CC BY 4.0, via Wikimedia Commons
-img/rotunda.jpg  "The Rotunda and Lawn, University of Virginia, Charlottesville" by Phil Roeder, CC BY 2.0, via Wikimedia Commons
-img/apartments.jpg  "Glebe Apartments" (Arlington, Virginia) by Dclemens1971, CC BY 4.0, via Wikimedia Commons (https://commons.wikimedia.org/wiki/File:Glebe_Apartments.jpg)
+Photographs used on the website (all Creative Commons, attribution given in the site footer):
+img/rosslyn.jpg     "Rosslyn Twin Towers 03" (Arlington, Virginia) by Dclemens1971, CC BY 4.0, via Wikimedia Commons
+img/govt.jpg        "Patrick Henry Building Richmond" by Morgan Riley, CC BY 3.0, via Wikimedia Commons
+img/rotunda.jpg     "The Rotunda and Lawn, University of Virginia, Charlottesville" by Phil Roeder, CC BY 2.0, via Wikimedia Commons
+img/apartments.jpg  "Glebe Apartments" (Arlington, Virginia) by Dclemens1971, CC BY 4.0, via Wikimedia Commons
