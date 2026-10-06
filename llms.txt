@@ -1,0 +1,27 @@
+# Commonwealth Utility Audit
+
+> Independent utility bill auditing firm serving Virginia and Washington, DC. It recomputes every line of a building's electric, gas and water bills against the meter readings and the utility's published tariff, recovers overcharges from the utility, and offers optional monthly bill monitoring. The audit is free; the only charge is 20% of refunds actually received.
+
+## Key facts
+- Legal name: Commonwealth Utility Audit LLC (Virginia). Founder and principal: Zak Zaloom.
+- Area served: Virginia and Washington, DC.
+- Utilities covered: Dominion Energy Virginia, City of Charlottesville gas and water, Pepco, Washington Gas, DC Water, BGE.
+- Clients: owner-paid apartment and student housing communities, commercial buildings, higher education and healthcare campuses, government buildings.
+- Pricing: back-audit of 24 to 36 months of bills is free. Recovery fee is 20% of refunds and credits actually received (17.5% for clients on monthly analysis), invoiced after the credit posts. No fee if nothing is recovered and none on future savings. Monthly analysis is optional, a flat fee quoted per building, cancellable on 30 days' notice.
+- Turnaround: written findings within 48 hours of receiving the bills; every finding shows its arithmetic and tariff basis; the client approves each claim before it is filed.
+- What is needed to start: 24 months of bills for one building, or a signed letter of authorization. No utility portal passwords are held.
+- Independence: does not sell or broker energy supply and takes no compensation from utilities or suppliers. Works alongside utility billing and submetering companies rather than replacing them.
+- Contact: zak@commonwealthutilityaudit.com
+
+## Typical findings
+- Demand charges billed on a misread or doubled meter reading
+- Accounts on the wrong rate schedule
+- Long runs of estimated reads followed by a catch-up bill
+- Late fees on bills the utility later corrected
+- Sales tax on tax-exempt accounts
+- Duplicate charges after a meter replacement
+- Sewer charged on water that never reaches the sewer (cooling towers, pools, irrigation), which a deduct meter can stop
+
+## Pages
+- [Home](https://commonwealthutilityaudit.com/): services, method, sectors, pricing, FAQ, contact
+- [LinkedIn](https://www.linkedin.com/company/commonwealth-utility-audit)
