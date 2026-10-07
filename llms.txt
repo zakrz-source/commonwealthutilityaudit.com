@@ -5,7 +5,7 @@
 ## Key facts
 - Legal name: Commonwealth Utility Audit LLC (Virginia). Founder and principal: Zak Zaloom.
 - Area served: Virginia and Washington, DC.
-- Utilities covered: Dominion Energy Virginia, City of Charlottesville gas and water, Pepco, Washington Gas, DC Water, BGE.
+- Utilities covered: any electric, gas, water or sewer utility in Virginia and Washington, DC; bills are recomputed from each utility's own published rates.
 - Clients: owner-paid apartment and student housing communities, commercial buildings, higher education and healthcare campuses, government buildings.
 - Pricing: back-audit of 24 to 36 months of bills is free. Recovery fee is 20% of refunds and credits actually received (17.5% for clients on monthly analysis), invoiced after the credit posts. No fee if nothing is recovered and none on future savings. Monthly analysis is optional, a flat fee quoted per building, cancellable on 30 days' notice.
 - Turnaround: written findings within 48 hours of receiving the bills; every finding shows its arithmetic and tariff basis; the client approves each claim before it is filed.
