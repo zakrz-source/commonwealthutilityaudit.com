@@ -24,4 +24,5 @@
 
 ## Pages
 - [Home](https://commonwealthutilityaudit.com/): services, method, sectors, pricing, FAQ, contact
+- [Sewer charges on water that never reaches the sewer](https://commonwealthutilityaudit.com/notes/sewer-charges-on-water-that-never-reaches-the-sewer.html): how cooling-tower, pool and irrigation water gets billed for sewer, how to spot it, and how a deduct meter stops it
 - [LinkedIn](https://www.linkedin.com/company/commonwealth-utility-audit)
