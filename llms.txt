@@ -7,7 +7,7 @@
 - Area served: Virginia and Washington, DC.
 - Utilities covered: any electric, gas, water or sewer utility in Virginia and Washington, DC; bills are recomputed from each utility's own published rates.
 - Clients: owner-paid apartment and student housing communities, commercial buildings, higher education and healthcare campuses, government buildings.
-- Pricing: back-audit of 24 to 36 months of bills is free. Recovery fee is 20% of refunds and credits actually received (17.5% for clients on monthly analysis), invoiced after the credit posts. No fee if nothing is recovered and none on future savings. Monthly analysis is optional, a flat fee quoted per building, cancellable on 30 days' notice.
+- Pricing: back-audit of 24 to 36 months of bills is free. Recovery fee is 20% of refunds and credits actually received (17.5% for clients on monthly analysis), invoiced after the credit posts. No fee if nothing is recovered and none on future savings. Monthly analysis (the No-Surprise Utility Program) is optional: $150 per building per month where utilities are passed to residents, $300 owner-paid up to $300,000 a year in utilities, $500 above that, Full Service from $750; first three months on approval; value guarantee; cancellable on 30 days' notice.
 - Turnaround: written findings within 48 hours of receiving the bills; every finding shows its arithmetic and tariff basis; the client approves each claim before it is filed.
 - What is needed to start: 24 months of bills for one building, or a signed letter of authorization. No utility portal passwords are held.
 - Independence: does not sell or broker energy supply and takes no compensation from utilities or suppliers. Works alongside utility billing and submetering companies rather than replacing them.
