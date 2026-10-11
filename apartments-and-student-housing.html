@@ -92,6 +92,13 @@
   .cta{background:var(--navy-2);color:#fff;padding:30px 26px;margin:56px 0 0;border-radius:3px}
   .cta h2{margin-top:0;color:#fff}
   .cta a{color:#E6D4A0}
+  .book{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+  .book a.cta-main,.book a.cta-alt{display:block;text-decoration:none;padding:16px 20px;border-radius:3px;font-weight:700;font-size:18px;line-height:1.25}
+  .book a span{display:block;font-weight:400;font-size:14px;margin-top:4px;opacity:.8}
+  .book a.cta-main{background:#E6D4A0;color:#0E1D37!important}
+  .book a.cta-alt{border:1.5px solid rgba(255,255,255,.55);color:#fff!important}
+  .cta p.reply{font-size:14.5px;color:rgba(255,255,255,.75);margin-bottom:0}
+  @media (max-width:640px){.book{grid-template-columns:1fr}}
   footer{color:var(--ink-2);font-size:14px;padding-block:28px 48px}
   footer a{color:var(--ink-2)}
   @media (max-width:820px){.tiers{grid-template-columns:1fr 1fr}ol.steps{grid-template-columns:1fr}}
@@ -163,8 +170,12 @@
 
   <div class="cta">
     <h2>Find out what your community's bills are hiding</h2>
-    <p>Email <a href="mailto:zak@commonwealthutilityaudit.com?subject=Free%20check%20of%20one%20community">zak@commonwealthutilityaudit.com</a> with the community's name. The check is free; you see your first monthly note before deciding anything.</p>
-    <p style="margin-bottom:0">Zak Zaloom, Founder · Commonwealth Utility Audit · Charlottesville, Virginia</p>
+    <p>Fifteen minutes is enough to see whether a free check is worth doing. You see your first monthly note before deciding anything.</p>
+    <div class="book">
+      <a class="cta-main" href="mailto:zak@commonwealthutilityaudit.com?subject=Book%20a%2015-minute%20call&amp;body=Hi%20Zak%2C%0A%0AI%27d%20like%20a%2015-minute%20call%20about%20utility%20bills%20for%3A%0A%28community%20name%20and%20address%29%0A%0ATimes%20that%20suit%20me%20this%20week%3A%0A-%20%0A-%20%0A%0AName%3A%0ACompany%20and%20role%3A%0APhone%20%28optional%29%3A%0A">Book a 15-minute call<span>Opens an email with two times to suggest</span></a>
+      <a class="cta-alt" href="mailto:zak@commonwealthutilityaudit.com?subject=Free%20check%20of%20one%20community&amp;body=Hi%20Zak%2C%0A%0ACommunity%20name%20and%20address%3A%0A%0AI%27ve%20attached%20up%20to%2024%20months%20of%20utility%20bills%20%28PDF%29.%0AOr%3A%20please%20send%20me%20the%20one-page%20authorization%20letter%20so%20you%20can%20request%20them.%0A%0AName%3A%0ACompany%20and%20role%3A%0A">Send bills for a free check<span>Attach up to 24 months of bills as PDFs</span></a>
+    </div>
+    <p class="reply">Or email <a href="mailto:zak@commonwealthutilityaudit.com">zak@commonwealthutilityaudit.com</a>. Zak Zaloom replies personally, within one business day.</p>
   </div>
 </main>
 

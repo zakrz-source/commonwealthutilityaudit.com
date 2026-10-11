@@ -319,6 +319,22 @@
   .contact h2{color:#fff}
   .contact p{color:rgba(255,255,255,.85)}
   .contact .kicker{color:#E6D4A0}
+  .contact .wrap{align-items:center}
+  .assure{list-style:none;padding:0;margin:20px 0 0;display:grid;gap:8px;font-size:16px;color:rgba(255,255,255,.9)}
+  .assure li{padding-left:26px;position:relative}
+  .assure li::before{content:"";position:absolute;left:2px;top:7px;width:12px;height:7px;border-left:2px solid #E6D4A0;border-bottom:2px solid #E6D4A0;transform:rotate(-45deg)}
+  .book{display:grid;gap:12px}
+  .book a.cta-main,.book a.cta-alt{display:block;text-decoration:none;padding:18px 22px;border-radius:3px;font-weight:700;font-size:19px;line-height:1.25}
+  .book a span{display:block;font-weight:400;font-size:14px;margin-top:4px;opacity:.8}
+  .book a.cta-main{background:#E6D4A0;color:#0E1D37}
+  .book a.cta-main:hover{background:#F1E3B8}
+  .book a.cta-alt{border:1.5px solid rgba(255,255,255,.55);color:#fff}
+  .book a.cta-alt:hover{background:rgba(255,255,255,.08)}
+  .direct{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding-top:10px;margin-top:4px;border-top:1px solid rgba(255,255,255,.2);font-size:15px}
+  .direct > span:first-child{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;opacity:.75}
+  .direct .v{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+  .direct a{color:#fff;overflow-wrap:anywhere}
+  .contact p.reply{font-size:14px;margin:0;color:rgba(255,255,255,.7)}
   .det{display:grid;gap:0;border-top:1px solid rgba(255,255,255,.25)}
   .det div{display:grid;grid-template-columns:120px 1fr;gap:12px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.18);font-size:15.5px;align-items:center}
   .det .k{font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;opacity:.75}
@@ -474,9 +490,13 @@
 </div>
 
 <div class="contact" id="contact"><div class="wrap">
-  <div><span class="kicker">Engage the firm</span><h2>Begin with a single building.</h2><p style="margin-top:14px;font-size:18px">Provide twenty-four months of bills, or execute a one-page letter of authorization and we will obtain them from the utility. A written audit follows within 48 hours. If nothing is found, the report is yours and no fee is due.</p></div>
-  <div class="det">
-    <div><span class="k">Email</span><span class="v"><span id="email">zak@commonwealthutilityaudit.com</span><button class="copy" data-copy="email" type="button">copy</button></span></div>
+  <div><span class="kicker">Book a call</span><h2>Begin with a single building.</h2><p style="margin-top:14px;font-size:18px">Fifteen minutes is enough to see whether a free check is worth doing. Or send twenty-four months of bills, or sign a one-page letter so we can get them, and written findings follow within 48 hours.</p>
+    <ul class="assure"><li>Free, with no obligation</li><li>Findings in 48 hours, with the arithmetic</li><li>Paid only if money comes back</li></ul></div>
+  <div class="book">
+    <a class="cta-main" href="mailto:zak@commonwealthutilityaudit.com?subject=Book%20a%2015-minute%20call&amp;body=Hi%20Zak%2C%0A%0AI%27d%20like%20a%2015-minute%20call%20about%20utility%20bills%20for%3A%0A%28building%20or%20portfolio%29%0A%0ATimes%20that%20suit%20me%20this%20week%3A%0A-%20%0A-%20%0A%0AName%3A%0ACompany%20and%20role%3A%0APhone%20%28optional%29%3A%0A">Book a 15-minute call<span>Opens an email with two times to suggest</span></a>
+    <a class="cta-alt" href="mailto:zak@commonwealthutilityaudit.com?subject=Free%20check%20of%20one%20building&amp;body=Hi%20Zak%2C%0A%0ABuilding%20name%20and%20address%3A%0A%0AI%27ve%20attached%20up%20to%2024%20months%20of%20utility%20bills%20%28PDF%29.%0AOr%3A%20please%20send%20me%20the%20one-page%20authorization%20letter%20so%20you%20can%20request%20them.%0A%0AName%3A%0ACompany%20and%20role%3A%0A">Send bills for a free check<span>Attach up to 24 months of bills as PDFs</span></a>
+    <div class="direct"><span>Or email directly</span><span class="v"><a id="email" href="mailto:zak@commonwealthutilityaudit.com">zak@commonwealthutilityaudit.com</a><button class="copy" data-copy="email" type="button">copy</button></span></div>
+    <p class="reply">Zak Zaloom replies personally, within one business day.</p>
   </div>
 </div></div>
 
@@ -484,7 +504,7 @@
   <div><h4>Commonwealth Utility Audit</h4><p>Independent utility bill auditing, recovery and monitoring for commercial, multifamily, government, education and healthcare buildings in Virginia and Washington, DC.</p></div>
   <div><h4>Services</h4><a href="#services">Historical bill audit</a><a href="#services">Recovery of overcharges</a><a href="#services">Continuous monitoring</a><a href="#services">Tariff and contract review</a><a href="#pricing">Pricing</a></div>
   <div><h4>Sectors</h4><a href="#sectors">Apartments, multifamily and commercial</a><a href="#sectors">Higher education and healthcare</a><a href="#sectors">Federal and government</a></div>
-  <div><h4>Contact</h4><a href="#contact">zak@commonwealthutilityaudit.com</a></div>
+  <div><h4>Contact</h4><a href="#contact">Book a 15-minute call</a><a href="mailto:zak@commonwealthutilityaudit.com">zak@commonwealthutilityaudit.com</a></div>
 </div><div class="wrap legal"><span>© Commonwealth Utility Audit. Not affiliated with any utility or energy supplier.</span><span>Photographs: Dclemens1971 (CC BY 4.0), Phil Roeder (CC BY 2.0), Morgan Riley (CC BY 3.0), via Wikimedia Commons.</span></div></footer>
 
 <script>
