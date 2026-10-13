@@ -26,10 +26,7 @@
   "areaServed":[{"@type":"State","name":"Virginia"},{"@type":"Place","name":"Washington, DC"}],
   "audience":{"@type":"BusinessAudience","audienceType":"Apartment and student housing owners and property managers"},
   "offers":[
-   {"@type":"Offer","name":"Utilities billed to residents","price":"150","priceCurrency":"USD","description":"Per building per month"},
-   {"@type":"Offer","name":"Utilities included in rent, up to $300,000 a year","price":"300","priceCurrency":"USD","description":"Per building per month"},
-   {"@type":"Offer","name":"Large community, over $300,000 a year","price":"500","priceCurrency":"USD","description":"Per building per month"},
-   {"@type":"Offer","name":"Full Service","priceSpecification":{"@type":"UnitPriceSpecification","minPrice":"750","priceCurrency":"USD","unitText":"per building per month"}}]},
+   {"@type":"Offer","name":"No-Surprise Utility Program","description":"Priced per community, per month, by size and utility spend; quoted after the free check. First three months for the price of one."}]},
  {"@type":"BreadcrumbList","itemListElement":[
   {"@type":"ListItem","position":1,"name":"Home","item":"https://commonwealthutilityaudit.com/"},
   {"@type":"ListItem","position":2,"name":"Apartments and student housing","item":"https://commonwealthutilityaudit.com/apartments-and-student-housing.html"}]},
@@ -75,7 +72,7 @@
   .tiers{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
   .tier{background:var(--paper);border:1px solid var(--rule);border-top:4px solid var(--navy);padding:16px;border-radius:3px;font-size:15.5px;color:var(--ink-2);line-height:1.45}
   .tier.prem{border-top-color:var(--gold);background:var(--gold-soft)}
-  .tier .t{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--ink-2)}
+  .tier .t{font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:var(--ink-2);margin-bottom:8px}
   .tier .p{font-family:var(--serif);font-size:32px;font-weight:600;color:var(--ink);line-height:1.2;margin:4px 0 6px}
   .terms{font-size:15px;color:var(--ink-2)}
   .guar{background:var(--navy-2);color:#fff;padding:22px 24px;border-radius:3px;margin-top:22px}
@@ -141,12 +138,13 @@
     <p><b>Recovery at 20%</b> instead of 33% on any refund, including the original free check, and a reminder 90 days before any supply contract ends.</p>
   </div>
 
-  <h2>Price per community, per month</h2>
+  <h2>Priced per community, quoted after your free check</h2>
+  <p class="terms" style="margin-top:0">The monthly fee depends on the community's size and utility spend. Once we've seen your bills, you get a fixed quote per community, per month.</p>
   <div class="tiers">
-    <div class="tier"><div class="t">Billed to residents</div><div class="p">$150</div>Utilities billed back to residents: we check the owner's share and the resident billing.</div>
-    <div class="tier"><div class="t">Included in rent</div><div class="p">$300</div>Owner-paid utilities up to $300,000 a year.</div>
-    <div class="tier"><div class="t">Large community</div><div class="p">$500</div>Owner-paid utilities over $300,000 a year.</div>
-    <div class="tier prem"><div class="t">Full Service</div><div class="p">from $750</div>Plus: we handle every utility contact, a quarterly review call, your owner report in your format, and we join your budget meeting.</div>
+    <div class="tier"><div class="t">Billed to residents</div>Utilities billed back to residents: we check the owner's share and the resident billing.</div>
+    <div class="tier"><div class="t">Included in rent</div>Owner-paid utilities, included in rent.</div>
+    <div class="tier"><div class="t">Large community</div>Owner-paid utilities with a large annual spend.</div>
+    <div class="tier prem"><div class="t">Full Service</div>Everything above, plus: we handle every utility contact, a quarterly review call, your owner report in your format, and we join your budget meeting.</div>
   </div>
   <p class="terms">10% off from the fifth building. No setup fee. From month four, pay monthly (cancel on 30 days' notice), quarterly, or <b>a year in advance and get 12 months for the price of 10</b>; quarterly and yearly run to the end of the period paid for.</p>
 
