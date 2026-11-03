@@ -1,20 +1,20 @@
 # Commonwealth Utility Audit
 
-> Independent utility bill auditing firm serving Virginia and Washington, DC. It recomputes every line of a building's electric, gas and water bills against the meter readings and the utility's published tariff, recovers overcharges from the utility, and offers optional monthly bill monitoring. The audit is free; the only charge is 33% of refunds actually received (20% for monthly-analysis clients).
+> Independent utility bill analysis firm serving Virginia and Washington, DC. Its main service is monthly analysis of a building's electric, gas and water bills (optional, a flat fee per building quoted after a free check): every new bill checked as it arrives, with a monthly note on what changed and why, so problems are caught the month they happen and budgets can be trusted. Clients start with a free check of 24 months of past bills. Refunds recovered from the utility are shared at 20% for monthly-analysis clients and 33% for clients who decline monthly analysis; nothing is charged on future savings.
 
 ## Key facts
 - Legal name: Commonwealth Utility Audit LLC (Virginia). Founder and principal: Zak Zaloom.
 - Area served: Virginia and Washington, DC.
 - Utilities covered: any electric, gas, water or sewer utility in Virginia and Washington, DC; bills are recomputed from each utility's own published rates.
 - Clients: owner-paid apartment and student housing communities, commercial buildings, higher education and healthcare campuses, government buildings.
-- Pricing: back-audit of 24 to 36 months of bills is free. Recovery fee is 33% of refunds and credits actually received (20% for clients on monthly analysis), invoiced after the credit posts. No fee if nothing is recovered and none on future savings. Monthly analysis (the No-Surprise Utility Program) is optional: priced per building per month by size and utility spend, quoted after the free check; first three months for the price of one; value guarantee; from month four billed monthly (cancellable on 30 days' notice), quarterly, or yearly in advance (12 months for the price of 10), with quarterly and yearly running to the end of the period paid for.
+- Pricing: monthly analysis (the No-Surprise Utility Program) is the main service and is optional: priced per building per month by size and utility spend, quoted after the free check; first three months for the price of one; value guarantee; from month four billed monthly (cancellable on 30 days' notice), quarterly, or yearly in advance (12 months for the price of 10), with quarterly and yearly running to the end of the period paid for. The back-audit (free check) of 24 to 36 months of bills is free. Recovery fee is 20% of refunds and credits actually received for monthly-analysis clients, or 33% for clients who decline monthly analysis, invoiced after the credit posts. No fee if nothing is recovered and none on future savings.
 - Apartment and student housing owners: https://commonwealthutilityaudit.com/apartments-and-student-housing.html (owner's share and resident billing checked monthly).
 - Turnaround: written findings within 7 days of receiving the bills; every finding shows its arithmetic and tariff basis; the client approves each claim before it is filed.
 - What is needed to start: 24 months of bills for one building, or a signed letter of authorization. No utility portal passwords are held.
 - Independence: does not sell or broker energy supply and takes no compensation from utilities or suppliers. Works alongside utility billing and submetering companies rather than replacing them.
 - Contact: zak@commonwealthutilityaudit.com
 
-## Typical findings
+## Typical billing errors (uncommon, but costly when they happen)
 - Demand charges billed on a misread or doubled meter reading
 - Accounts on the wrong rate schedule
 - Long runs of estimated reads followed by a catch-up bill
@@ -22,6 +22,14 @@
 - Sales tax on tax-exempt accounts
 - Duplicate charges after a meter replacement
 - Sewer charged on water that never reaches the sewer (cooling towers, pools, irrigation), which a deduct meter can stop
+
+## What monthly analysis watches
+- Demand peaks and what drives them
+- Leaks and usage that drifts upward with no change in the building
+- Estimated reads before they become a catch-up bill
+- Supply contract end dates (reminder 90 days ahead) and supply prices against contract
+- Year to date against budget, with a full-year forecast
+- For buildings that bill residents: the owner's share, and resident recoveries matched against the master bills
 
 ## Pages
 - [Home](https://commonwealthutilityaudit.com/): services, method, sectors, pricing, FAQ, contact
