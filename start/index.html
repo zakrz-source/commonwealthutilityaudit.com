@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Book a call | Commonwealth Utility Audit</title>
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600;8..60,700&family=Source+Sans+3:wght@400;500;600;700&display=swap">
+<style>
+:root{--bg:#F6F5F2;--paper:#FFFFFF;--ink:#1C2128;--ink-2:#4F5761;--rule:#D9D6CF;--rule-2:#B9B5AC;--navy:#14284B;--navy-2:#0E1D37;--navy-soft:#E7EBF2;--gold:#A8892B;--gold-soft:#F1EAD6;--pen:#B3261E;
+ --serif:"Source Serif 4",Georgia,serif;--sans:"Source Sans 3",-apple-system,Helvetica,Arial,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#101418;--paper:#171C22;--ink:#ECEEF1;--ink-2:#AEB5BE;--rule:#2B323B;--rule-2:#3D4650;--navy:#1C3A6B;--navy-2:#132A4E;--navy-soft:#1B2634;--gold:#C9A94B;--gold-soft:#2A2618;--pen:#FF6B62;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#101418;--paper:#171C22;--ink:#ECEEF1;--ink-2:#AEB5BE;--rule:#2B323B;--rule-2:#3D4650;--navy:#1C3A6B;--navy-2:#132A4E;--navy-soft:#1B2634;--gold:#C9A94B;--gold-soft:#2A2618;--pen:#FF6B62;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.5}
+.top{background:#14284B;color:#fff;padding:18px 16px 22px}
+.top .in,.wrap{max-width:640px;margin:0 auto}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--serif);font-weight:600;font-size:17px}
+.brand img{width:26px;height:26px}
+h1{font-family:var(--serif);font-weight:700;font-size:28px;line-height:1.15;margin:16px 0 6px}
+.top p{margin:0;color:#DDE3EC;font-size:16px}
+.wrap{padding:18px 16px 48px}
+.steps{display:flex;gap:6px;margin:0 0 16px}
+.steps i{flex:1;height:5px;border-radius:3px;background:var(--rule)}
+.steps i.on{background:var(--gold)}
+.card{background:var(--paper);border:1px solid var(--rule);border-radius:10px;padding:18px 16px}
+h2{font-family:var(--serif);font-weight:600;font-size:21px;margin:0 0 4px;color:var(--navy)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) h2{color:#C9D6EC}}
+.sub{color:var(--ink-2);font-size:15px;margin:0 0 14px}
+label.q{display:block;font-weight:600;font-size:15px;margin:14px 0 5px}
+label.q small{font-weight:400;color:var(--ink-2)}
+input[type=text],input[type=email],input[type=tel],select,textarea{width:100%;font:inherit;font-size:16px;padding:11px 12px;border:1px solid var(--rule-2);border-radius:7px;background:var(--paper);color:var(--ink)}
+textarea{min-height:70px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:1px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.opts{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+.opts label,.chk{display:flex;gap:9px;align-items:flex-start;font-size:15px;padding:9px 10px;border:1px solid var(--rule);border-radius:7px;cursor:pointer;background:var(--paper)}
+.opts input,.chk input{margin-top:3px;width:18px;height:18px;flex:none;accent-color:#14284B}
+.chk{margin-top:10px}
+.err{color:var(--pen);font-size:14px;margin-top:10px;display:none}
+.nav{display:flex;justify-content:space-between;gap:10px;margin-top:18px}
+button{font:inherit;font-weight:600;font-size:16px;padding:13px 20px;border-radius:7px;border:1px solid #14284B;background:#14284B;color:#fff;cursor:pointer}
+button.back{background:transparent;color:var(--ink);border-color:var(--rule-2)}
+button:disabled{opacity:.6;cursor:wait}
+.hide{display:none}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.note{font-size:13px;color:var(--ink-2);margin-top:14px}
+.cal{width:100%;height:680px;border:0;border-radius:8px;background:#fff;margin-top:8px}
+.tip{background:var(--gold-soft);border-radius:8px;padding:10px 12px;font-size:15px;margin:10px 0}
+a{color:var(--navy)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) a{color:#C9D6EC}}
+@media (max-width:420px){.row2,.opts{grid-template-columns:1fr}h1{font-size:25px}}
+</style>
+</head>
+<body>
+<div class="top"><div class="in">
+ <div class="brand"><img src="../img/mark-inverse.svg" alt="">Commonwealth Utility Audit</div>
+ <h1>Book your 30-minute call</h1>
+ <p>Three quick steps, about two minutes. Then pick a time and your Google Meet link is sent straight away.</p>
+</div></div>
+
+<div class="wrap">
+ <div class="steps" aria-hidden="true"><i class="on"></i><i></i><i></i><i></i></div>
+
+ <form id="f" novalidate>
+  <div class="hp" aria-hidden="true"><label>Leave this empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+
+  <!-- step 1 -->
+  <section class="card step" data-step="1">
+   <h2>About you</h2>
+   <p class="sub">So I know who I'm talking to.</p>
+   <div class="row2">
+    <div><label class="q" for="first">First name</label><input id="first" name="first_name" type="text" autocomplete="given-name" required></div>
+    <div><label class="q" for="last">Last name</label><input id="last" name="last_name" type="text" autocomplete="family-name" required></div>
+   </div>
+   <label class="q" for="email">Work email</label><input id="email" name="email" type="email" autocomplete="email" required>
+   <label class="q" for="phone">Mobile number</label><input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required>
+   <label class="q" for="company">Company</label><input id="company" name="company" type="text" autocomplete="organization" required>
+   <label class="q" for="role">Your role</label>
+   <select id="role" name="role" required><option value="">Choose one</option>
+    <option>Owner or principal</option><option>Portfolio or regional manager</option><option>Property or community manager</option>
+    <option>Finance, controller or accounting</option><option>Facilities or maintenance</option><option>HOA or condo board member</option><option>Other</option></select>
+   <div class="err">Please fill in every field.</div>
+   <div class="nav"><span></span><button type="button" class="next">Next</button></div>
+  </section>
+
+  <!-- step 2 -->
+  <section class="card step hide" data-step="2">
+   <h2>Your buildings</h2>
+   <p class="sub">So the call is about your portfolio, not a generic pitch.</p>
+   <label class="q" for="buildings">How many buildings do you manage or own?</label>
+   <select id="buildings" name="buildings" required><option value="">Choose one</option>
+    <option>1 to 4</option><option>5 to 10</option><option>11 to 25</option><option>26 to 100</option><option>More than 100</option></select>
+   <label class="q">What kind of buildings? <small>Pick any</small></label>
+   <div class="opts" data-group="types">
+    <label><input type="checkbox" name="types" value="Apartments">Apartments</label>
+    <label><input type="checkbox" name="types" value="Student housing">Student housing</label>
+    <label><input type="checkbox" name="types" value="Condo or HOA">Condo or HOA</label>
+    <label><input type="checkbox" name="types" value="Office or commercial">Office or commercial</label>
+    <label><input type="checkbox" name="types" value="Senior living">Senior living</label>
+    <label><input type="checkbox" name="types" value="Other">Other</label>
+   </div>
+   <label class="q">Where are they? <small>Pick any</small></label>
+   <div class="opts" data-group="where">
+    <label><input type="checkbox" name="where" value="Virginia">Virginia</label>
+    <label><input type="checkbox" name="where" value="Washington, DC">Washington, DC</label>
+    <label><input type="checkbox" name="where" value="Maryland">Maryland</label>
+    <label><input type="checkbox" name="where" value="Elsewhere">Elsewhere</label>
+   </div>
+   <label class="q" for="pays">Who pays the utility bills?</label>
+   <select id="pays" name="who_pays" required><option value="">Choose one</option>
+    <option>We pay most of them (master meters or a central plant)</option><option>Residents pay their own; we pay common areas and vacant units</option><option>A mix across buildings</option><option>Not sure</option></select>
+   <label class="q" for="spend">Roughly what do they spend on utilities a year? <small>A guess is fine</small></label>
+   <select id="spend" name="annual_spend" required><option value="">Choose one</option>
+    <option>Under $100,000</option><option>$100,000 to $250,000</option><option>$250,000 to $1 million</option><option>Over $1 million</option><option>Not sure</option></select>
+   <div class="err">Please answer each question.</div>
+   <div class="nav"><button type="button" class="back">Back</button><button type="button" class="next">Next</button></div>
+  </section>
+
+  <!-- step 3 -->
+  <section class="card step hide" data-step="3">
+   <h2>Make the 30 minutes count</h2>
+   <p class="sub">Two answers and I'll come prepared with what matters to you.</p>
+   <label class="q" for="goal">What would make this call worth your time?</label>
+   <select id="goal" name="goal" required><option value="">Choose one</option>
+    <option>Finding money we're owed</option><option>Lowering what we pay every month</option><option>A utility budget that holds</option>
+    <option>Taking utility reporting off my plate</option><option>Just seeing what's possible</option></select>
+   <label class="q" for="when">If it's a fit, when would you want it in place?</label>
+   <select id="when" name="timing" required><option value="">Choose one</option>
+    <option>Before our 2027 budget is final</option><option>In the next three months</option><option>Later in 2027</option><option>No timeline yet</option></select>
+   <label class="q" for="also">Anyone else who should join? <small>Optional: name and email</small></label>
+   <input id="also" name="also_invite" type="text" placeholder="For example, your controller or regional manager">
+   <label class="q" for="notes">Anything you'd like me to look at first? <small>Optional</small></label>
+   <textarea id="notes" name="notes" placeholder="A bill that went up, a building that worries you, a budget deadline"></textarea>
+   <label class="chk"><input type="checkbox" name="text_reminder" value="Yes" checked><span>Text me a reminder an hour before the call.</span></label>
+   <label class="chk"><input type="checkbox" id="commit" name="commitment" value="Yes" required><span>I'll join on Google Meet at the time I pick, and if something comes up I'll reschedule from the calendar invite.</span></label>
+   <div class="err">Please answer both questions and tick the last box.</div>
+   <div class="nav"><button type="button" class="back">Back</button><button type="submit" id="send">Pick a time</button></div>
+   <p class="note">Your answers are used only to prepare for the call. They're never sold or shared.</p>
+  </section>
+ </form>
+
+ <!-- step 4: qualified -->
+ <section class="card hide" id="book">
+  <h2>Thanks, <span class="who"></span>. Now pick a time.</h2>
+  <p class="sub">The Google Meet link and a calendar invite arrive by email as soon as you book.</p>
+  <div class="tip">Book with the same email you used here, <b class="em"></b>, so I can match your answers to your time.</div>
+  <iframe class="cal" title="Choose a time" src="about:blank" data-src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0C7C_rmK6PnFPe3idReu416mCkkZJoupc2wR74HRot3Gb8uwu7GjXzcVYRXA-wOV0l2Dc4OuOA?gv=true"></iframe>
+  <p class="note">Calendar not loading? <a href="https://calendar.app.google/ARdrcK2zyBEz45zH8" target="_blank" rel="noopener">Open it in a new tab</a>.</p>
+ </section>
+
+ <!-- step 4: not a fit yet -->
+ <section class="card hide" id="later">
+  <h2>Thanks, <span class="who"></span>.</h2>
+  <p class="sub" style="margin-bottom:8px">The monthly analysis is built for owners and managers with five or more buildings in the Virginia and DC area, so a call might not be the best use of your time yet.</p>
+  <p style="margin:0">I'll email you at <b class="em"></b> within one business day with what we can do for a portfolio your size. Questions before then: <a href="mailto:zak@commonwealthutilityaudit.com">zak@commonwealthutilityaudit.com</a>.</p>
+ </section>
+</div>
+
+<script>
+// Apps Script web app on zak@commonwealthutilityaudit.com (saves to a Sheet and emails Zak).
+var ENDPOINT = "https://script.google.com/macros/s/AKfycbyIBCoPUEVJ33wY2T6k2FRajbicbIgzC_7phyPRZvymPaPKlaHWYunGBxT3_obvhiEu/exec";
+// true: 1 to 4 buildings, or buildings only outside VA/DC/MD, get the thank-you note instead of the calendar.
+var GATE = true;
+
+var form = document.getElementById('f'), steps = [].slice.call(document.querySelectorAll('.step')), bars = document.querySelectorAll('.steps i'), cur = 0;
+var src = new URLSearchParams(location.search).get('src') || 'direct';
+function show(i){ steps.forEach(function(s,k){ s.classList.toggle('hide', k !== i); }); bars.forEach(function(b,k){ b.classList.toggle('on', k <= i); }); cur = i; window.scrollTo(0,0); }
+function valid(sec){
+  var ok = true;
+  sec.querySelectorAll('[required]').forEach(function(el){
+    var good = el.type === 'checkbox' ? el.checked : (el.value || '').trim() !== '';
+    if (el.type === 'email') good = good && /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(el.value.trim());
+    if (el.type === 'tel') good = good && el.value.replace(/\D/g,'').length >= 10;
+    el.setAttribute('aria-invalid', good ? 'false' : 'true'); if (!good) ok = false;
+  });
+  sec.querySelectorAll('[data-group]').forEach(function(g){ if (!g.querySelector('input:checked')) ok = false; });
+  sec.querySelector('.err').style.display = ok ? 'none' : 'block';
+  return ok;
+}
+document.querySelectorAll('.next').forEach(function(b){ b.onclick = function(){ if (valid(steps[cur])) show(cur + 1); }; });
+document.querySelectorAll('.back').forEach(function(b){ b.onclick = function(){ show(cur - 1); }; });
+
+function collect(){
+  var d = {};
+  new FormData(form).forEach(function(v,k){ d[k] = d[k] ? d[k] + ', ' + v : v; });
+  if (!d.text_reminder) d.text_reminder = 'No';
+  d.source = src; d.submitted = new Date().toISOString();
+  return d;
+}
+function qualified(d){
+  if (!GATE) return true;
+  var where = (d.where || '');
+  return d.buildings !== '1 to 4' && /Virginia|Washington|Maryland/.test(where);
+}
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+  if (!valid(steps[2])) return;
+  var d = collect();
+  if (d.website) return; // bot
+  var ok = qualified(d); d.qualified = ok ? 'Yes' : 'No';
+  var btn = document.getElementById('send'); btn.disabled = true; btn.textContent = 'One moment...';
+  var done = function(){
+    var box = document.getElementById(ok ? 'book' : 'later');
+    box.querySelectorAll('.who').forEach(function(x){ x.textContent = d.first_name; });
+    box.querySelectorAll('.em').forEach(function(x){ x.textContent = d.email; });
+    if (ok) { var f = box.querySelector('iframe'); f.src = f.dataset.src; }
+    form.classList.add('hide'); document.querySelector('.steps').classList.add('hide'); box.classList.remove('hide'); window.scrollTo(0,0);
+  };
+  if (!ENDPOINT) { done(); return; }
+  fetch(ENDPOINT, {method:'POST', mode:'no-cors', body:new URLSearchParams(d)}).then(done, done);
+});
+</script>
+</body>
+</html>
